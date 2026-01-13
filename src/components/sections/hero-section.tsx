@@ -90,13 +90,14 @@ export function HeroSection() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="relative hidden lg:block"
+            className="relative order-first lg:order-last"
           >
-            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative aspect-[4/5] max-w-[280px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-none mx-auto rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_768/u_https://assets.cdn.filesafe.space/fvFDhgw4kk0kZ2UfpQCE/media/692241506652aa882cefc3f2.jpeg"
                 alt="Coach Traci - Caregiver Coach"
                 fill
+                sizes="(max-width: 640px) 280px, (max-width: 768px) 320px, (max-width: 1024px) 380px, 50vw"
                 className="object-cover"
                 priority
               />
@@ -104,12 +105,12 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-sage-900/20 to-transparent" />
             </div>
 
-            {/* Floating card */}
+            {/* Floating card - hidden on mobile, shown on larger screens */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-lg border border-cream-200"
+              className="hidden md:block absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-lg border border-cream-200 max-w-[280px]"
             >
               <p className="text-sage-800 font-medium text-sm">
                 &ldquo;When you care for yourself first, your love becomes sustainable, not sacrificial.&rdquo;
