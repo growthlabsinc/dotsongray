@@ -13,9 +13,9 @@ export function HeroSection() {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-cream-50 via-cream-100 to-sage-50" />
 
-      {/* Subtle decorative elements */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-sage-100/50 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-terracotta-100/30 rounded-full blur-3xl" />
+      {/* Subtle decorative elements - contained within viewport */}
+      <div className="absolute top-1/4 -right-20 w-64 md:w-96 h-64 md:h-96 bg-sage-100/50 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 -left-20 w-52 md:w-80 h-52 md:h-80 bg-terracotta-100/30 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
